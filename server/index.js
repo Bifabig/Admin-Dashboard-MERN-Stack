@@ -11,16 +11,16 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 // DATA IMPORTS
-// import User from "./models/User.js";
-// import { dataUser } from "./data/index.js";
-// import Product from "./models/Product.js";
-// import { dataProduct } from "./data/index.js";
-// import ProductStat from "./models/ProductStat.js";
-// import { dataProductStat } from "./data/index.js";
-// import Transaction from "./models/Transaction.js";
-// import { dataTransaction } from "./data/index.js";
-// import OverallStat from "./models/OverallStat.js";
-// import { dataOverallStat } from "./data/index.js";
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
+import Product from "./models/Product.js";
+import { dataProduct } from "./data/index.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataProductStat } from "./data/index.js";
+import Transaction from "./models/Transaction.js";
+import { dataTransaction } from "./data/index.js";
+import OverallStat from "./models/OverallStat.js";
+import { dataOverallStat } from "./data/index.js";
 
 // CONFIGURATION
 dotenv.config();
