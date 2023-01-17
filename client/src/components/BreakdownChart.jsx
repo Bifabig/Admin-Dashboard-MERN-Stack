@@ -1,6 +1,6 @@
-import { Box, Typography, useTheme } from "@mui/material";
-import { ResponsivePie } from "@nivo/pie";
 import React from "react";
+import { ResponsivePie } from "@nivo/pie";
+import { Box, Typography, useTheme } from "@mui/material";
 import { useGetSalesQuery } from "state/api";
 
 const BreakdownChart = ({ isDashboard = false }) => {
@@ -74,7 +74,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
             : { top: 40, right: 80, bottom: 80, left: 80 }
         }
         sortByValue={true}
-        innerRadius={0.5}
+        innerRadius={0.45}
         activeOuterRadiusOffset={8}
         borderWidth={1}
         borderColor={{
@@ -93,17 +93,17 @@ const BreakdownChart = ({ isDashboard = false }) => {
         legends={[
           {
             anchor: "bottom",
-            direction: "row",
+            direction: isDashboard ? "column" : "row",
             justify: false,
-            translateX: isDashboard ? 20 : 0,
-            translateY: isDashboard ? 50 : 56,
-            itemsSpacing: 0,
-            itemWidth: 85,
+            translateX: isDashboard ? 0 : 0,
+            translateY: isDashboard ? 80 : 56,
+            itemsSpacing: 10,
+            itemWidth: 75,
             itemHeight: 18,
             itemTextColor: "#999",
             itemDirection: "left-to-right",
             itemOpacity: 1,
-            symbolSize: 18,
+            symbolSize: 15,
             symbolShape: "circle",
             effects: [
               {
@@ -125,7 +125,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
         pointerEvents="none"
         sx={{
           transform: isDashboard
-            ? "translate(-75%, 170%)"
+            ? "translate(-75%, -170%)"
             : "translate(-50%, -100%)",
         }}
       >
